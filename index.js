@@ -164,6 +164,8 @@ exports.stream = function (opts) {
             return this.emit('error', new PluginError('critical', 'Streaming not supported'));
         }
 
+        console.log('critical file', file);
+
         var options = _.assign(opts || {}, {
             html: file.contents.toString()
         });
